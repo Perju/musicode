@@ -1,0 +1,30 @@
+* Cosas de sonic-pi
+** Lista de sintetizadores
+  |----------------+------------+--------------+------------------|
+  | :beep          | :dull_bell | :mod_sine    | :sound_in        |
+  | :blade         | :fm        | :mod_tri     | :sound_in_stereo |
+  | :bnoise        | :gnoise    | :noise       | :square          |
+  | :chipbass      | :growl     | :piano       | :subpulse        |
+  | :chiplead      | :hollow    | :pluck       | :supersaw        |
+  | :chipnoise     | :hoover    | :pnoise      | :tb303           |
+  | :cnoise        | :mod_beep  | :pretty_bell | :tech_saws       |
+  | :dark_ambience | :mod_dsaw  | :prophet     | :tri             |
+  | :dpulse        | :mod_fm    | :pulse       | :zawa            |
+  | :dsaw          | :mod_pulse | :saw         |                  |
+  | :dtri          | :mod_saw   | :sine        |                  |
+  |----------------+------------+--------------+------------------|
+
+   - Se pueden usar de varias maneras
+     #+begin_src ruby
+     synth :mod_sine
+     #+end_src
+   - Tambien se pueden usar envolviendo un loop
+     #+begin_src ruby
+     with_synth :mod_sine do
+       live_loop :my_loop do
+         play :C
+         sleep 1
+       end
+     end
+     #+end_src
+

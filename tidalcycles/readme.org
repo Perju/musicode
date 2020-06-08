@@ -1,0 +1,19 @@
+* TidalCycles con Spacemacs
+** Pre-requisitos
+- Instalar SuperCollider como indican en su página oficial, descargar código
+  fuente, compilar e instalar.
+- Instalar los =Optional Presequisites= addons SC3 como indican en el
+  repositorio de github, solo hay que clonar el repo y lanzar dos scripts de
+  shell.
+** Instalar tidal usando cabal
+- Crear el directorio, archivo o lo que sea para que cabal no explote con ~mkdir
+  -p $HOME/.cabal/store/ghc-8.x.x/package.db~
+- Hacer una nueva instalación de tidal usando ~cabal update~ y ~cabal new-install
+  tidal --lib~ como se indica en =Troubleshooting_a_Tidal_install=
+- Instalar tidal usando ~cabal update~ y ~cabal install tidal~
+** Lanzar el servidor y reproducir música
+- Evaluar las lineas del archivo =start-script.scd= para importar SuperDirt y
+  para iniciarlo desde SuperCollider.
+- Empezar a programar música con tidal desde nuestro editor favorito, lo que
+  viene siendo lanzar una terminal REPL de tidal y evaluar código que se
+  comunique con el servidor SuperDirt.
