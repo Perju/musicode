@@ -1,1 +1,27 @@
-d1 $ sound "hh bd hh sn"
+-- Patron con subdivisiones [a [b b] c d] suena en un ciclo.
+-- Y poliritmia al separar con la coma. Suena a la vez en el mismo ciclo
+d1 $ sound "[hh [bd bd] hh sn, ~ cp ~]"
+
+-- Cada elemento entre <a b c> se reproduce por cada ciclo.
+-- Con *4 repetimos un sonido 4 veces y como esta entre [] pues subdivisión
+d2 $ sound "<[arpy:1*2] [arpy:2*4] [arpy:3*8] [arpy:2*4]>"
+
+-- Repetir cada cuatro ciclos con sample/4
+d3 $ sound "sax/4"
+
+-- Modificar secuencias con funciones
+d4 $ every 4 (rev) (sound "[hh [bd*3 bd] hh hh [sn sn*2] hh]")
+
+d5 $ sound (every 4 (fast 4) "bd*2 [bd [sn sn*2 sn] sn]")
+
+-- Aplicar efectos con patrones de control concatenandolos con #
+d6 $ sound "bd*4" # crush "4"
+
+-- Los valores de control también son patrones
+d7 $ sound "hh bd hh sn" # gain "1 0.7 0.9 0.7"
+
+-- Combinando patrones
+d8 $ every 2 (|> speed "2") $ sound "arpy*4" |> speed "1" |> note "0 2 4 5"
+
+-- algunos efectos comunes gain, pan, shape speed y vowel que puede ser "a e i o u" o.O
+d9 $ vowel "<a*2 e i*2 o u>" |> sound "stab"
