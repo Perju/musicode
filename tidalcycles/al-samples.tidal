@@ -1,0 +1,40 @@
+-- Commited for ammend
+p "test" $ sound "<>"
+
+p "test" $ silence
+
+-- rares to reorder later
+p "rare" $ sound "<circus can bubble breath industrial outdoor ades4 amencutup armora battles tok toys ulgab uxay voodoo wind wooble world yeah speechless speedupdown stab subroc3d sugar tacscan seawolf sitar speakspell speech pebbles/22 noise>"
+
+-- single sounds
+p "single-01" $ sound "<808 arpy bottle trump sundance sax ~ ~ sf sid sine pluck rave2 moog ~ ~ ~ mute newnotes notes latibro less metal juno gtr ~ ~ hoover em2 f feelfx flick cb control>"
+
+p "bips-bleeps" $ "<ul tink blip bleep ul v tech rm rs short space perc print mouth msg kurt lighter miniyeah monsterb insect invaders glasstap hit d casio chin coins>"
+
+p "basses" $ sound "<bass bass1 bass2 bass3 jvbass>"
+
+-- bass drums a pedals
+p "drum-bds" $ sound "<808bd 909 bass0 bassdm bassfoo bd world stomp techno popkick reverbkick house if ifdrums jazz jungbass kicklinn hardkick future dr_few clubkick>"
+
+-- snares and sticks
+p "drum-sns" $ sound "<808sd ades2 ades3 auto sd sn realclaps noise2 odx hand feel cp e east clak click>"
+
+p "drum-tns" $ sound "<808hc 808ht 808lc 808lt 808mc 808mt bin peri ht mt lt made mash mash2 glitch glitch2 drum>"
+
+p "drum-hhs" $ sound "<808oh ab bend oc linnhats incoming jungle hardcore haw hc hh hh27 ho electro1 db dr dr2 dr55 co>"
+
+p "drum-cymbs" $ sound "<808cy cr cc>"
+
+p "durm-alt" $ sound "<tabla tabla2 sequential psr gretsch drumtraks>"
+
+p "nature" $ sound "<birds ~ birds3 ~ baa ~ ~ baa2 ~ ~ crow fire ~ ~ dork2 ~ ~>"
+
+p "breaks" $ sound "<breaks125 ~ breaks152 ~ ~ breaks157 ~ breaks165 ~ alex ~ led ~ ~ ~ ~ foo dist ~ ~>"
+
+p "singing" $ sound "<bev ~ ~ ~ ~ ~ ~ ~ ~ ~>"
+
+p "voice" $ sound "<alphabet blue xmas tablex rave ravemono ~ numbers h hmm erk ~ fest fm ~ ~ diphone diphone2 dorkbot ~>"
+
+p "ambiance" $ sound "<sheffield ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ade ~ ~ ~ ~ ~ arp pad ~ ~ ~ padlong ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ koy ~ ~ ~>"
+
+p "noise" $ sound "<proc procshort mp3 off made2 ~ ~ gab gabba gabbaloud gabbalouder cosmicg ~>"
