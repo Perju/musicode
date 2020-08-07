@@ -19,12 +19,16 @@ p "drum-bds" $ sound "<808bd 909 bass0 bassdm bassfoo bd world stomp techno popk
 -- snares and sticks
 p "drum-sns" $ sound "<808sd ades2 ades3 auto sd sn realclaps noise2 odx hand feel cp e east clak click>"
 
+-- tombs
 p "drum-tns" $ sound "<808hc 808ht 808lc 808lt 808mc 808mt bin peri ht mt lt made mash mash2 glitch glitch2 drum>"
 
+-- Hi-hats
 p "drum-hhs" $ sound "<808oh ab bend oc linnhats incoming jungle hardcore haw hc hh hh27 ho electro1 db dr dr2 dr55 co>"
 
+-- Cymbals
 p "drum-cymbs" $ sound "<808cy cr cc>"
 
+-- Other percusion sounds like cowbell
 p "durm-alt" $ sound "<tabla tabla2 sequential psr gretsch drumtraks>"
 
 p "nature" $ sound "<birds ~ birds3 ~ baa ~ ~ baa2 ~ ~ crow fire ~ ~ dork2 ~ ~>"

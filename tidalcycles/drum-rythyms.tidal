@@ -1,0 +1,16 @@
+-- ritmo básico --
+-- bombo caja simple
+d1 $ sound "[808bd 808sd]"
+
+-- bombo caja nivel 2
+d1 $ sound "<[808bd 808sd] [808bd [~ 808bd] 808sd ~]>"
+
+-- charles
+d2 $ sound "[808oh*4]" # gain "[0.7]"
+
+--- Ritmo a contratempo
+-- bombo y caja a contratempo en 2 y 4
+d1 $ sound "[~ 808bd ~ 808sd]"
+
+-- charles a tempo en 1 y 3
+d2 $ sound "[808oh ~ 808oh ~]" # gain "[0.7]"
