@@ -1,5 +1,5 @@
 * Ejemplos
-** Ubicacion samples
+** Ubicación samples
 - La ubicación se puede comprobar desde supercollider con =Quarks.gui= y
   normalmente es =~/.local/share/SuperCollider/downloaded-quarks/Dirt-Samples/=
   y una lista de los samples que vienen por defecto.
@@ -44,3 +44,24 @@
 - Empezar a programar música con tidal desde nuestro editor favorito, lo que
   viene siendo lanzar una terminal REPL de tidal y evaluar código que se
   comunique con el servidor SuperDirt.
+
+* Conexión a servidor remoto
+** Arrancar el servidor desde SuperCollider
+Arracar el servidor desde SuperCollider seleccionando todo el bloque desde que
+abre el parentesis hasta que cierra con el punto y coma. El script
+start-script.scd contiene una versión modificada de [[https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd][este]] con la siguiente linea.
+
+~~dirt.start(57120, [0, 0], NetAddr("0.0.0.0"))~
+
+** Establecer el script que se usara
+Hay que modificar =oAddress = "192.168.1.x"= en el archivo =BootTidal.hs= para
+que apunte al servidor que hemos lanzado en el paso anterior y configurar la
+variable =tidal-boot-script-path= despues de cargar =tidal-mode=.
+#+begin_src emacs-lisp
+(setq tidal-boot-script-path (expand-file-name "./BootTidal.hs"))
+#+end_src
+
+** Usar la copia del script de arranque
+Usar el scirpt que es una copia del script que se encuentra en la carpeta
+=C:\Users\username\AppData\Roaming\cabal\x86_64-windows-ghc-x.x.x\tidal-1.x.x=
+
