@@ -1,0 +1,2 @@
+* cl-collider
+Una libreria para comunicarnos con super-collider usando common-lisp.
