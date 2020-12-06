@@ -1,0 +1,10 @@
+-- Cadencia dominante
+-- Ritmo
+d1 $ sound "<[808bd 808sd] [808bd [~ 808bd] 808sd ~]>"
+
+d2 $ sound "[808oh*4]" # gain "[0.6 0.5]*2"
+
+-- Acompañamiento
+d3 $ n "<[[d4, f4, a5, c5]*2 ]*2 [[g4, b5, d5, f5]*2 ]*2 [[c4, e4, g4, b4]*2 ]*2>/4"
+  # s "supersaw"
+  # gain "0.5"
