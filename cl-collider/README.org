@@ -1,2 +1,12 @@
 * cl-collider
 Una libreria para comunicarnos con super-collider usando common-lisp.
+
+** El paquete jp-musicode
+Se añade un paquete =:jp-musicode= que hay hacer un enlace simbolico en la
+carpeta de los proyectos locales de quicklisp, o en el caso de windows copiar la
+carpeta en la carpeta que corresponda.
+#+begin_src shell
+cd ~/quicklisp/local-projects
+ln -s ./musicode/cl-collider/my-package jp-musicode
+#+end_src
+
