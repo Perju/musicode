@@ -1,26 +1,25 @@
 (defpackage :jp-musicode
-  (:use #:cl #:sc)
+  (:use #:cl #:sc #:cl-patterns)
            ;; start stop functions
   (:export #:collider-start
            #:collider-stop
 
            ;; synthesizers
+           ;; #:sine-wave #:saw #:drum
            #:load-synths
-           ;; #:sine-wave
-           ;; #:saw
-           ;; #:drum
 
            ;; sequencers
-           #:sequencer-testing))
+           #:sequencer-testing)
+  (:shadowing-import-from :cl-patterns
+   :play :end :dur :quant :freq :stop))
 
 (in-package :jp-musicode)
 (named-readtables:in-readtable :sc)
 
 (defun collider-start ()
-  (setf *s* (make-external-server "localhost" :port 48800))
-  (server-boot *s*)
+  (cl-patterns:start-backend :supercollider)
   (when (not (uiop/os:os-windows-p))
     (jack-connect)))
 
 (defun collider-stop ()
-  (server-quit *s*))
+  (cl-patterns:stop-backend :supercollider))
