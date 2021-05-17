@@ -1,16 +1,18 @@
-(ql:quickload :cl-collider)
+(ql:quickload :jp-musicode)
 
-(in-package :sc-user)
-(named-readtables:in-readtable :sc)
+(in-package :jp-musicode)
+;; (named-readtables:in-readtable :sc)
 
-(setf *s* (make-external-server "localhost" :port 48800))
-(server-boot *s*)
+;; (setf *s* (make-external-server "localhost" :port 48800))
+;; (server-boot *s*)
 
-(jack-connect)
+;; (jack-connect)
+(collider-start)
 
 (defvar *synth*)
-(setf *synth* (play (sin-osc.ar [320 321] 0 .2)))
+(setf *synth* (cl-collider:play (sin-osc.ar [320 321] 0 .2)))
+(cl-patterns:play)
 
 (free *synth*)
 
-(server-quit *s*)
+(collider-stop)
