@@ -17,4 +17,4 @@ haskell.
 ** cl-collider
 
 Al igual que tidalcycles este paquete se comunica con SuperCollider traduciendo
-el código lisp a un código que pueda entener SuperCollider.
+el código lisp a un código que pueda entender SuperCollider.
