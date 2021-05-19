@@ -3,6 +3,8 @@
            ;; start stop functions
   (:export #:collider-start
            #:collider-stop
+           #:collider-patterns-start
+           #:collider-patterns-stop
 
            ;; synthesizers
            ;; #:sine-wave #:saw #:drum
