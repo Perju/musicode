@@ -17,13 +17,16 @@
 
   (defsynth drum ((freq 3000))
     (let* ((env (env-gen.ar (perc 0.001 0.1) :act :free))
-           (sig (lpf.ar (white-noise.ar) (* freq env))))
+           (sig (lpf.ar (brown-noise.ar) (* freq env))))
       (out.ar 0 (pan2.ar sig 0 0.4))))
 
-  (defsynth snare ((freq 17000))
+  (defsynth snare ((freq 50))
     (let* ((env (env-gen.ar (perc 0.001 0.05) :act :free))
-           (sig (lpf.ar (white-noise.ar) (* freq env))))
+           (sig (hpf.ar (pink-noise.ar) (* freq env))))
       (out.ar 0 (pan2.ar sig 0 0.2))))
-  )
 
-
+  (defsynth :sample ((buffer 0) (rate 1) (start 0) (amp 0.5) (out 0))
+    (let ((sig (play-buf.ar 2 buffer (* rate (buf-rate-scale.ir buffer))
+                            :start-pos (* start (buf-frames.ir buffer))
+                            :act :free)))
+      (out.ar out (* amp sig)))))
