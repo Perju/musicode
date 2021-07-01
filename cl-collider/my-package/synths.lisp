@@ -15,10 +15,10 @@
            (sig (lpf.ar (saw.ar freq env) (* freq 2))))
       (out.ar 0 [sig sig])))
 
-  (defsynth drum ((freq 3000))
+  (defsynth drum ((freq 3000) (amp 0.5))
     (let* ((env (env-gen.ar (perc 0.001 0.1) :act :free))
            (sig (lpf.ar (brown-noise.ar) (* freq env))))
-      (out.ar 0 (pan2.ar sig 0 0.4))))
+      (out.ar 0 (pan2.ar (* sig amp) 0 0.4))))
 
   (defsynth snare ((freq 50))
     (let* ((env (env-gen.ar (perc 0.001 0.05) :act :free))
