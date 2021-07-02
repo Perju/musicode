@@ -8,5 +8,6 @@
   :serial t
   :depends-on (#:cl-collider #:named-readtables #:cl-patterns/supercollider)
   :components ((:file "package")
+               (:file "util")
                (:file "synths")
                (:file "sequencers")))
