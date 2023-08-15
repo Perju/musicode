@@ -3,7 +3,13 @@
 (named-readtables:in-readtable :sc)
 
 (defun collider-start()
-  (setf *s* (make-external-server "localhost" :port 48800))
+  ;; (setf *s* (make-external-server "localhost" :port 48800))
+  ;; las propiedades del servidor se pueden ver en server-options.lisp
+  (setf *s* (make-external-server "localhost"
+                                  :server-options (make-server-options
+                                                   :num-input-bus 2
+                                                   :num-output-bus 2)
+                                  :port 48801))
   (server-boot *s*)
   (when (not (uiop/os:os-windows-p))
     (jack-connect)))

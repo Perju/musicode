@@ -1,7 +1,7 @@
 (ql:quickload :jp-musicode)
 
 (in-package :jp-musicode)
-;; (named-readtables:in-readtable :sc)
+(named-readtables:in-readtable :sc)
 
 ;; (setf *s* (make-external-server "localhost" :port 48800))
 ;; (server-boot *s*)
