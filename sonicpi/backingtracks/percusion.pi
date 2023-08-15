@@ -1,0 +1,45 @@
+# Ritmo bombo caja
+define :botscats do
+    sample :drum_heavy_kick
+    sleep 0.25
+    sample :drum_cymbal_closed
+    sleep 0.25
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :drum_cymbal_closed
+    sleep 0.25
+end
+
+define :odd_kick do 
+    sample :drum_heavy_kick
+    sleep 0.5
+    sample :drum_heavy_kick
+    sleep 0.5
+end
+
+define :chisx4 do
+    4.times do
+        sample :drum_cymbal_soft
+        sleep 0.25
+    end
+end
+
+define :snare_blast do
+    8.times do
+        sample :drum_snare_hard, amp: 0.5
+        sleep 0.125
+    end
+end
+# ejemplo
+live_loop :example do
+    in_thread do
+        odd_kick
+    end
+    in_thread do        
+        snare_blast
+    end
+    in_thread do
+        play chord(:e, :minor)
+    end
+    sleep 1
+end
